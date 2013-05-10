@@ -15,7 +15,7 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
-module MongoidBlank
+module Goals
   class Application < Rails::Application
     Mongoid.logger.level = Logger::DEBUG
     Moped.logger.level = Logger::DEBUG

@@ -1,3 +1,20 @@
 User.destroy_all
 
-user = User.create email: "joe@example.com", password: "123", password_confirmation: "123"
+User.create(
+	name: "P",
+	email: "p@y.com",
+	password: "y"
+	)
+
+
+User.create(
+	name: "r",
+	email: "r@y.com",
+	password: "y"
+	)
+
+User.create(
+	name: "t",
+	email: "t@y.com",
+	password: "y"
+	)

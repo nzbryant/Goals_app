@@ -1,4 +1,4 @@
-mongoid_blank
+goals
 =============
 
 Blank mongoid setup

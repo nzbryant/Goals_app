@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-MongoidBlank::Application.load_tasks
+Goals::Application.load_tasks
