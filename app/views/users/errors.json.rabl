@@ -1,3 +1,3 @@
 object @user
 
-attributes :id, :errors
+attributes :_id, :errors

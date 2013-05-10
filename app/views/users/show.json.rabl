@@ -1,3 +1,3 @@
 object @user
 
-extends "users/_base"
+attributes :_id, :name, :email
