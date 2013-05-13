@@ -1,0 +1,48 @@
+/*****
+* VARIABLES*
+****/
+
+$blue_light: #87dfff;
+$serif: 'Georgia', 'Times', serif;
+$white: #fff;
+
+li {
+	border-bottom: 1px solid #666;
+	position: relative;
+	padding-left: 70px;
+
+	&:last-child {
+		border-bottom: 0;
+	}
+
+	h2 {
+		margin-bottom: 0;
+	}
+	p {
+		margin-top: 0;
+	}
+}
+
+img {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+body {
+	font: 100%/1.5 $serif;
+	background: $blue_light;
+	}
+
+#page {
+	width: 400px;
+	margin: 0 auto;
+	background: $white;
+}
+
+.user_listing {
+	list-style: none;
+	padding: 0;
+}
+
+
