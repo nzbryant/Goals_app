@@ -10,6 +10,11 @@ class User
   field :fish, type: String
   field :salt, type: String
 
+
+  validates :name, length: { minimum: 1 }
+  validates :email, length: { minimum: 6 }, uniqueness: true
+
+
   before_save :encrypt_password
 
 	def authenticate(password)

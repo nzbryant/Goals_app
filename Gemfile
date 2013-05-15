@@ -7,19 +7,24 @@ gem 'rabl'
 gem 'oj'
 gem 'gon'
 gem 'js-routes'
+gem 'bootstrap-sass'
 
 group :development, :test do
   gem "rspec-rails"
-  gem "capybara"
   gem "better_errors"
   gem "binding_of_caller"
   gem "meta_request"
   gem "selenium-webdriver"
   gem "pry"
-  gem "rspec-rails"
+  gem "database_cleaner"
+  gem "factory_girl_rails"
+end
+
+group :test do
+  gem "faker" 
   gem "capybara"
   gem "launchy"
-  gem "database_cleaner"
+  gem "guard-rspec"
 end
 
 # Gems used only for assets and not required

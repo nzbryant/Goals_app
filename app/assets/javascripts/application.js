@@ -8,10 +8,11 @@
 //= require ./vendor/marionette
 //= require ./vendor/relational
 //= require js-routes
-//= require_tree ./vendor/layouts
-//= require_tree ./vendor/themes
 //= require ./vendor/jquery.modal
 //= require users
 //= require_self
+//= require ./vendor/bootstrap
+//= require jquery_ujs
+//= require_tree .
 
 
