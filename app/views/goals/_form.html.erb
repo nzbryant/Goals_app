@@ -1,0 +1,15 @@
+<%= form_for @goal do |f| %>
+  <%= f.label :life_area, :class => 'class_life_area' %>
+  <%= f.text_field :life_area %><br />
+
+	<%= f.label :target_date %>
+  <%= f.text_field :target_date %><br />
+
+  <%= f.label :text %>
+  <%= f.text_field :text %><br />
+
+  <%= f.label :strategy %>
+  <%= f.text_area :strategy, :size => "7x2" %><br />
+
+  <%= f.submit %>
+<% end %>

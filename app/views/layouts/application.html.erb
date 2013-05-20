@@ -14,14 +14,11 @@
  
   <body>
 
-    <header class="navbar navbar-fixed-top">
-        <ul class="nav nav-tabs">
-          <li class="active">
-            <a href="#">Home</a>
-          </li>
-          <li><a href="#">...</a></li>
-          <li><a href="#">...</a></li>
-        </ul>
+    <header>
+
+      <div class="container">
+        <%= render 'layouts/navigation' %>
+      </div>
     </header>
 
 <div id="main" role="main">
@@ -34,12 +31,34 @@
               <%= yield %>
             
             </div>
+            </div>
           </div>
-          <footer>
+        </div> <!--! end of .container -->
+      </div> <!--! end of #main -->
+ 
+        <footer class="footer">
+            <div class="container">
+              <div class="row">
+                <nav class="span4">
+                  <div class="navbar">
+                    <ul class="nav">
+                      <li><!--%= 
+                        link_to_unless_current "Privacy policy", privacy_url
+                      %--></li>
+                      <li><!--%= 
+                        link_to_unless_current "Terms of use", terms_url
+                      %--></li>
+                    </ul>
+                  </div>
+                </nav>
+                <p class="muted credit span8 text-right" style="padding: 50px 0">
+                  &copy; 2013 Life Capital Ltd
+                </p>
+              </div>
+            </div>
+
           </footer>
-        </div>
-      </div> <!--! end of .container -->
-    </div> <!--! end of #main -->
+       
     <%= javascript_include_tag "application" %>
     <%= javascript_include_tag "backbone/app" %>
     <script src="http://code.jquery.com/jquery.js"></script>

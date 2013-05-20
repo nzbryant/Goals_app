@@ -10,6 +10,12 @@ class User
   field :fish, type: String
   field :salt, type: String
 
+  embeds_many :action_habits 
+  embeds_many :beliefs 
+  embeds_many :external_comms 
+  embeds_many :internal_comms
+  embeds_many :goals
+  embeds_many :values
 
   validates :name, length: { minimum: 1 }
   validates :email, length: { minimum: 6 }, uniqueness: true

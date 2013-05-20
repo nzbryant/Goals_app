@@ -1,2 +1,29 @@
-<h1>Goals#index</h1>
-<p>Find me in app/views/goals/index.html.erb</p>
+<h1>Active Goals</h1>
+<p></p>
+<div class="row">
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th class="span3">Life Area</th>
+      <th class="span1">Target Date</th>
+      <th class="span3">Goal</th>
+      <th class="span6">Strategy</th>
+      <!--th class="th-categ-edit"></th-->
+      <!--th class="th-categ-delete"></th-->
+    </tr>
+  </thead>
+
+  <tbody>
+    <!--% :order => "name DESC" %-->
+    <% for goal in @goals %>
+      <tr>
+        <td><%= goal.life_area %></td>
+        <td><%= goal.target_date %></td>
+        <td><%= goal.text %></td>
+        <td><%= goal.strategy %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>  

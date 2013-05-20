@@ -6,6 +6,8 @@ class Belief
   field :source, type: String
   field :entry_date, type: Date
 
+  embedded_in :user
+
   validates :life_area, length: { minimum: 1 }
   validates :text, length: { minimum: 1 }
 end

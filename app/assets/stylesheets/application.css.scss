@@ -8,11 +8,37 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require_self
- *= require_tree .
  *= require bootstrap-responsive
  *= require bootstrap
+ *= require_self
+ *= require_tree .
  
  */
 
 body { padding-top: 60px; }
+
+.container {
+	width: 960px;
+}
+
+input, textarea {
+	width: 550px;
+}
+
+label {
+	font-weight: bold;
+}
+
+table, thead, tbody, td {
+	max-width: 960px;
+	word-wrap: break-word;
+}
+td {
+	max-width: 500px;
+}
+@media (max-width: 940px) {
+  .container-fluid{max-width:940px; margin: 0 auto;} 
+}
+
+
+

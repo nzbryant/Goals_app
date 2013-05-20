@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails'
 gem 'mongoid'
+gem 'genghisapp'
 gem 'thin'
 gem 'rabl'
 gem 'oj'

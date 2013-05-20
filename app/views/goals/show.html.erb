@@ -1,2 +1,27 @@
-<h1>Goals#show</h1>
-<p>Find me in app/views/goals/show.html.erb</p>
+<h1><%= @goal.text %></h1>
+
+<div class = "row">
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th class="span3">Life Area</th>
+      <th class="span1">Target Date</th>
+      <th class="span3">Goal</th-->
+      <th class="span5">Strategy</th-->
+      <!--th class="th-categ-edit"></th-->
+      <!--th class="th-categ-delete"></th-->
+    </tr>
+  </thead>
+
+  <tbody>
+    <!--% :order => "name DESC" %-->
+      <tr>
+        <td><%= @goal.life_area %></td>
+        <td><%= @goal.target_date %></td>
+        <td><%= @goal.text %></td>
+        <td><%= @goal.strategy %></td>
+      </tr>
+  </tbody>
+</table>
+</div>

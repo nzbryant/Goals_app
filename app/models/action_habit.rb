@@ -4,4 +4,6 @@ class ActionHabit
   field :text, type: String
 
   validates :text, length: { minimum: 1 }
+  embedded_in :user
+  
 end
