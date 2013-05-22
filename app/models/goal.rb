@@ -11,5 +11,7 @@ class Goal
 
   validates :life_area, length: { minimum: 1 }
   validates :text, length: { minimum: 1 }
+  validates :target_date, length: { minimum: 1 }
+
 
 end

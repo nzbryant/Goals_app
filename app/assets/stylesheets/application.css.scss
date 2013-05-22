@@ -8,10 +8,14 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
+ * For Tablesorter:
+ *= require theme.default.css 
+ *
  *= require bootstrap-responsive
  *= require bootstrap
  *= require_self
  *= require_tree .
+
  
  */
 
@@ -20,6 +24,10 @@ body { padding-top: 60px; }
 .container {
 	width: 960px;
 }
+
+h1 {
+	font-size: 24px;
+	}
 
 input, textarea {
 	width: 550px;
@@ -30,12 +38,20 @@ label {
 }
 
 table, thead, tbody, td {
-	max-width: 960px;
+	max-width: 940px;
 	word-wrap: break-word;
 }
 td {
-	max-width: 500px;
+	max-width: 350px;
+	min-width: 80px;
+
 }
+
+.tablesorter-default, .tablesorter-default th,
+.tablesorter-default thead td {
+	font-size: 14px;
+}
+
 @media (max-width: 940px) {
   .container-fluid{max-width:940px; margin: 0 auto;} 
 }

@@ -9,6 +9,7 @@ gem 'oj'
 gem 'gon'
 gem 'js-routes'
 gem 'bootstrap-sass'
+gem 'jquery-tablesorter'
 
 group :development, :test do
   gem "rspec-rails"

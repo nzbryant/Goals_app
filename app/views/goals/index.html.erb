@@ -1,13 +1,16 @@
 <h1>Active Goals</h1>
 <p></p>
+<%= button_to "New", new_goal_path, :id => "goal_btn", :method => :get %>
+
 <div class="row">
-<table class="table table-striped">
+<table id="myTable" class "table table-striped tablesorter" style="width:auto">
   <thead>
     <tr>
-      <th class="span3">Life Area</th>
-      <th class="span1">Target Date</th>
-      <th class="span3">Goal</th>
-      <th class="span6">Strategy</th>
+      <th class="span1">Life Area</th>
+      <th class="span1 sorter-shortDate dateFormat-mmddyyyy">Target Date (mmddyyyy)</th>
+      <th class="span4">Goal</th>
+      <th class="span5 sorter-false">Strategy</th>
+      <th class="span1 sorter-false">Edit/Delete</th>
       <!--th class="th-categ-edit"></th-->
       <!--th class="th-categ-delete"></th-->
     </tr>
@@ -15,14 +18,19 @@
 
   <tbody>
     <!--% :order => "name DESC" %-->
-    <% for goal in @goals %>
+    <% unless @goals.empty? %>
+      <% for goal in @goals %>
       <tr>
         <td><%= goal.life_area %></td>
         <td><%= goal.target_date %></td>
         <td><%= goal.text %></td>
         <td><%= goal.strategy %></td>
+        <td><%= link_to "Edit", edit_goal_path(goal) %> /
+            <%= link_to "Delete", goal, :method => :delete, :confirm => "Are you sure" %>   
+        </td>
 
       </tr>
+      <% end %>
     <% end %>
   </tbody>
 </table>

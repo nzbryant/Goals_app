@@ -12,16 +12,6 @@ class GoalsController < ApplicationController
       # would have been to render the "create" view.
       render :action => "new"
     end
-
-    # def create
-    # @client = Client.new(params[:client])
-    # if @client.save
-    #   redirect_to @client
-    # else
-    #   # This line overrides the default rendering behavior, which
-    #   # would have been to render the "create" view.
-    #   render :action => "new"
-    # end
     
   end
 
@@ -30,12 +20,22 @@ class GoalsController < ApplicationController
   end
 
   def edit
+    @goal = Goal.find(params[:id])
   end
 
   def update
+    @goal = Goal.find(params[:id])
+    if @goal.update_attributes(params[:goal])
+      redirect_to goals_path
+    else
+      render :edit, :notice => "Apologies, failed to save. Please try again soon."
+    end
   end
 
   def destroy
+    @goal = Goal.find(params[:id])
+    @goal.destroy
+    redirect_to goals_path, :notice => "Goal was deleted."
   end
 
   def index
