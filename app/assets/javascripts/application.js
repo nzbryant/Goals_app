@@ -13,6 +13,7 @@
 //= require jquery-tablesorter/jquery.metadata
 //= require jquery-tablesorter/jquery.tablesorter
 //= require jquery-tablesorter/jquery.tablesorter.widgets
+//= require jquery.backstretch
 
 $(function(){
 	$("#myTable").tablesorter({
@@ -44,6 +45,25 @@ $(function(){
       }
     });
 
+        $.backstretch([
+          "../assets/surf_pic.jpg",
+          "../assets/nz_pic.jpg",
+          "../assets/money_pic.jpg",
+          ], {duration: 3500, fade: 2333});
+
 });
+//"../assets/lgu-test.jpg" in an array in $.backstretch([ *your images here*])
+
+//Backstretch - for background
+
+  // To attach Backstrech as the body's background
+  //$.backstretch("path/to/image.jpg");
+
+  // You may also attach Backstretch to a block-level element
+ //$(".foo").backstretch("path/to/image.jpg");
+
+  // Or, to start a slideshow, just pass in an array of images
+          
+        
 
 
