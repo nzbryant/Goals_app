@@ -88,9 +88,6 @@ button, #goal_btn {
 	font-size: 14px;
 }
 
-@media (max-width: 940px) {
-  .container-fluid{max-width:940px; margin: 0 auto;} 
-}
 
 /* ...for the buttons */
 button, #btn
@@ -147,4 +144,8 @@ button:active, #btn:active
 	animation: none;
 }
 
+.alert {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
 

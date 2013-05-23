@@ -49,7 +49,7 @@ $(function(){
           "../assets/surf_pic.jpg",
           "../assets/nz_pic.jpg",
           "../assets/money_pic.jpg",
-          ], {duration: 3500, fade: 2333});
+          ], {duration: 3500, fade: 1700});
 
 });
 //"../assets/lgu-test.jpg" in an array in $.backstretch([ *your images here*])

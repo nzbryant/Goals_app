@@ -1,8 +1,11 @@
-<p></p>
-<% if flash[:notice] %>
-    <p class="notice"><%= flash[:notice] %></p>
-<% end %>
 
-<% if flash[:error] %>
-      <p class="error"><%= flash[:error] %></p>
+<% flash.each do |name, msg| %>
+  <% if msg.is_a?(String) %>
+    <p></p>
+    <div class="alert alert-<%= name == :notice ? "success" : "error" %>">
+      <a class="close" data-dismiss="alert">&#215;</a>
+      <p></p>
+      <%= content_tag :div, msg, :id => "flash_#{name}", :style => 'padding-top: 0px;'%>
+    </div>
+  <% end %>
 <% end %>
