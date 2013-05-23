@@ -1,0 +1,2 @@
+class CharacterTraitsController < ApplicationController
+end

@@ -1,5 +1,5 @@
 require 'spec_helper'
 
-describe ActionHabit do
+describe "character_traits/update.html.erb" do
   pending "add some examples to (or delete) #{__FILE__}"
 end

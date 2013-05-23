@@ -6,7 +6,7 @@ class GoalsController < ApplicationController
   def create
     @goal = Goal.new(params[:goal])
     if @goal.save 
-      redirect_to goals_path
+      redirect_to goals_path, :notice => "Your new goal is saved"
     else
       # This line overrides the default rendering behavior, which
       # would have been to render the "create" view.
@@ -26,7 +26,7 @@ class GoalsController < ApplicationController
   def update
     @goal = Goal.find(params[:id])
     if @goal.update_attributes(params[:goal])
-      redirect_to goals_path
+      redirect_to goals_path, :notice => "Your goal was edited"
     else
       render :edit, :notice => "Apologies, failed to save. Please try again soon."
     end
