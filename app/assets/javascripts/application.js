@@ -52,18 +52,7 @@ $(function(){
           ], {duration: 3500, fade: 1700});
 
 });
-//"../assets/lgu-test.jpg" in an array in $.backstretch([ *your images here*])
 
-//Backstretch - for background
-
-  // To attach Backstrech as the body's background
-  //$.backstretch("path/to/image.jpg");
-
-  // You may also attach Backstretch to a block-level element
- //$(".foo").backstretch("path/to/image.jpg");
-
-  // Or, to start a slideshow, just pass in an array of images
-          
-        
+$('#flash').fadeOut(3500);
 
 

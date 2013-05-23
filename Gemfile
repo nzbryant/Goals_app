@@ -10,6 +10,7 @@ gem 'gon'
 gem 'js-routes'
 gem 'bootstrap-sass'
 gem 'jquery-tablesorter'
+gem 'bson_ext'
 
 group :development, :test do
   gem "rspec-rails"

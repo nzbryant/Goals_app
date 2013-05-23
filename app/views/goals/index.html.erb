@@ -6,7 +6,7 @@
   <thead>
     <tr>
       <th class="span1">Life Area</th>
-      <th class="span1 sorter-shortDate dateFormat-mmddyyyy">Target Date (mmddyyyy)</th>
+      <th class="span1 sorter-shortDate dateFormat-mmddyyyy">Target Date (ddmmyyyy)</th>
       <th class="span4">Goal</th>
       <th class="span5 sorter-false">Strategy</th>
       <th class="span1 sorter-false">Edit/Delete</th>
@@ -21,7 +21,7 @@
       <% for goal in @goals %>
       <tr>
         <td><%= goal.life_area %></td>
-        <td><%= goal.target_date %></td>
+        <td><%= l goal.target_date.to_date %></td>
         <td><%= goal.text %></td>
         <td><%= goal.strategy %></td>
         <td><%= link_to "Edit", edit_goal_path(goal) %> /
