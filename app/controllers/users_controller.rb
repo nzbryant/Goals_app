@@ -1,5 +1,18 @@
 class UsersController < ApplicationController
-	respond_to :json
+	
+def new
+	@user = User.new
+end
+  
+def create
+ @user = User.new(params[:user])
+  if @user.save
+    redirect_to root_url, :notice => "Signed up!"
+  else
+    render "new"
+  end
+end
+
 
 def index
 	@users = User.all.to_a
@@ -13,15 +26,6 @@ def show
 	end
 end
 
-def create
-	@user = User.create params[:id]
-
-	if @user.save
-		render :show
-	else
-		render :errors, status: :unprocessable_entity
-	end
-end
 
 def update
 	begin

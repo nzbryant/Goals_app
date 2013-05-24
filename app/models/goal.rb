@@ -6,8 +6,7 @@ class Goal
   field :text, type: String
   field :strategy, type: String
 
-  #embedded_in :user
-  
+  #embedded_in :user, :inverse_of => :goals  
 
   validates :life_area, length: { minimum: 1 }
   

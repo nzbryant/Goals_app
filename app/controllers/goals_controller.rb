@@ -4,6 +4,7 @@ class GoalsController < ApplicationController
   end
 
   def create
+    #@user = User.find(params[:user_id])
     @goal = Goal.new(params[:goal])
     if @goal.save 
       redirect_to goals_path, :notice => "Your new goal is saved"
