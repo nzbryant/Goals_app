@@ -1,9 +1,9 @@
-<div style="float:right; font-weight:bold; color:white">
+<div id = "top-right" style="float:right; font-weight:bold; color:white; background-color:#f8f7e5; border-radius: 5px; padding: 2px;">
   <% if current_user %>
     Logged in as <%= current_user.email %> &nbsp
     <%= link_to "Log Out", log_out_path %>
   <% else %>
-    <%= link_to "Sign Up", sign_up_path %> <span style="color:white">or</span> 
+    <%= link_to "Sign Up", sign_up_path %> <span style="color:#0088cc">or</span> 
     <%= link_to "Log In", log_in_path %>
   <% end %>
 </div>    

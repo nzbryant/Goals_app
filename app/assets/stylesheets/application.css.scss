@@ -62,7 +62,11 @@ table, thead, tbody, td {
 td {
 	max-width: 350px;
 	min-width: 20px;
+}
 
+p {
+	font-weight: bold;
+	color: black;
 }
 
 button, #goal_btn {
@@ -78,6 +82,8 @@ button, #goal_btn {
 	margin-top: 20px;
 	background-color:#f8f7e5;
 	font-weight: bold;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
 }
 
 .credit {

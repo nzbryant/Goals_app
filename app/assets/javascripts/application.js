@@ -49,7 +49,7 @@ $(function(){
           "../assets/surf_pic.jpg",
           "../assets/nz_pic.jpg",
           "../assets/money_pic.jpg",
-          ], {duration: 3500, fade: 1000});
+          ], {duration: 4700, fade: 1100});
 
 });
 
