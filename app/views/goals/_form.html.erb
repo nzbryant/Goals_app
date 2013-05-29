@@ -1,6 +1,7 @@
 <!-- form to create a goal for a user. Need to pass in user id-->
 
 <%= form_for [@user, @goal] do |f| %>
+
   <%= f.label :life_area, :class => 'class_life_area' %>
   <%= f.text_field :life_area %><br />
 

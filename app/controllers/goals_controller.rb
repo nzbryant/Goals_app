@@ -1,13 +1,14 @@
 class GoalsController < ApplicationController
-  # def new
-  #   @goal = Goal.new
-  # end
+   def new
+     @user = User.find(params[:user_id])
+     @goal = Goal.new
+   end
 
   def create
     @user = User.find(params[:user_id])
     @goal = Goal.new(params[:goal])
     if @goal.save 
-      redirect_to goals_path, :notice => "Your new goal is saved"
+      redirect_to user_goals_path, :notice => "Your new goal is saved"
     else
       # This line overrides the default rendering behavior, which
       # would have been to render the "create" view.
