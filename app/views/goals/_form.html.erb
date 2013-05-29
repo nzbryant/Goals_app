@@ -1,8 +1,10 @@
-<%= form_for @goal do |f| %>
+<!-- form to create a goal for a user. Need to pass in user id-->
+
+<%= form_for [@user, @goal] do |f| %>
   <%= f.label :life_area, :class => 'class_life_area' %>
   <%= f.text_field :life_area %><br />
 
-	<%= f.label :target_date, "Target date (dd-mm-yyyy)"%>
+  <%= f.label :target_date, "Target date (dd-mm-yyyy)"%>
   <%= f.text_field :target_date %><br />
 
   <%= f.label :text %>

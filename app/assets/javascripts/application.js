@@ -46,9 +46,9 @@ $(function(){
     });
 
         $.backstretch([
-          "../assets/surf_pic.jpg",
-          "../assets/nz_pic.jpg",
-          "../assets/money_pic.jpg",
+          "/assets/surf_pic.jpg",
+          "/assets/nz_pic.jpg",
+          "/assets/money_pic.jpg",
           ], {duration: 4700, fade: 1100});
 
 });

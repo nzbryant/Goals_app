@@ -6,9 +6,9 @@ Goals::Application.routes.draw do
 
   resources :values, :beliefs, :internal_comms, :external_comms, :habits, :character_traits, :sessions
   
-  resources :users, :except => [ :edit ] 
-  resources :goals
-  
+  resources :users, :except => [ :edit ] do
+	  resources :goals
+	end
    
   root :to => 'site#index'
 end

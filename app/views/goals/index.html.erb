@@ -1,5 +1,5 @@
 <div><% if current_user %>
-  <%= button_to "Create a New Goal", new_goal_path, :id => "btn", :method => :get %>
+  <%= button_to "Create a New Goal", new_user_goal_path, :id => "btn", :method => :get %>
   <% else %>
   <%= button_to "Login to Create or View Your Goals", log_in_path, :id => "btn", :method => :get %>
   <% end %>
@@ -28,9 +28,10 @@
         <td><%= goal.life_area %></td>
         <td><%= l goal.target_date.to_date %></td>
         <td><%= goal.text %></td>
-        <td><%= goal.strategy %></td>
-        <td><%= link_to "Edit", edit_goal_path(goal) %> /
-            <%= link_to "Delete", goal, :method => :delete, :confirm => "Are you sure" %>   
+        <td><%= goal.strategy, :style=>[white-space: pre-wrap] %></td>
+        <td><%= link_to "Edit", edit_user_goal_path(current_user.id, goal) %> /
+          <!--Delete the goal-->
+            <%= link_to "Delete", user_goal_path(current_user.id, goal), :method => :delete, :confirm => "Are you sure" %>   
         </td>
 
       </tr>

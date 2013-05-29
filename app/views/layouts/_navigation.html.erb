@@ -1,9 +1,9 @@
-<div id = "top-right" style="float:right; font-weight:bold; color:white; background-color:#f8f7e5; border-radius: 5px; padding: 2px;">
+<div id = "top-right" style="float:right; font-weight:bold; color:#0088cc; background-color:#f8f7e5; border-radius: 5px; padding: 2px;">
   <% if current_user %>
-    Logged in as <%= current_user.email %> &nbsp
+    Logged in as <%= current_user.email %> &nbsp-&nbsp
     <%= link_to "Log Out", log_out_path %>
   <% else %>
-    <%= link_to "Sign Up", sign_up_path %> <span style="color:#0088cc">or</span> 
+    <%= link_to "Sign Up", sign_up_path %> or 
     <%= link_to "Log In", log_in_path %>
   <% end %>
 </div>    
@@ -12,9 +12,13 @@
 <%= link_to_unless_current image_tag('Life_Creator_logo_min.gif'), root_path %>
 <ul class="nav nav-tabs">
   <li><%= link_to "Values", values_path %></li>
-  <li><%= link_to "Goals", goals_path %></li>
+  <% if current_user %>
+      <li><%=  link_to "Goals", user_goals_path(current_user.id) %></li>
+    
+    <% else %>
+    <% end %>
   <li><%= link_to "Habits", habits_path %></li>
-	<li><%= link_to "Character", character_traits_path %></li>
-	<li><%= link_to "Beliefs", beliefs_path %></li>
+  <li><%= link_to "Character", character_traits_path %></li>
+  <li><%= link_to "Beliefs", beliefs_path %></li>
 </ul>
 
