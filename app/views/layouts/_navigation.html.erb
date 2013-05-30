@@ -1,6 +1,7 @@
-<div id = "top-right" style="float:right; color:black; background-color:#f8f7e5; border-radius: 5px; padding: 2px;">
+<!--Top right - login-->
+<div id = "top-right" style="float:right; color:gray; background-color:#f8f7e5; border-radius: 5px; padding: 2px;">
   <% if current_user %>
-    Logged in as <%= current_user.email %> &nbsp-&nbsp
+    <em>Logged in as <%= current_user.email %> </em>&nbsp-&nbsp
     <%= link_to "Log Out", log_out_path %>
   <% else %>
     <%= link_to "Sign Up", sign_up_path %> or 
@@ -8,17 +9,25 @@
   <% end %>
 </div>    
 
-    
+<!--logo-->
 <%= link_to_unless_current image_tag('LifeCreator_image.png', :class => "logo", :height => "auto", :width => "300"), root_path %>
+
+<!--nav tabs-->
 <ul class="nav nav-tabs">
-  <li><%= link_to "Values", values_path %></li>
   <% if current_user %>
-      <li><%=  link_to "Goals", user_goals_path(current_user.id) %></li>
-    
-    <% else %>
-    <% end %>
-  <li><%= link_to "Habits", habits_path %></li>
-  <li><%= link_to "Character", character_traits_path %></li>
-  <li><%= link_to "Beliefs", beliefs_path %></li>
+    <li><%= link_to "Values", values_path %></li>
+    <li><%= link_to "Goals", user_goals_path(current_user.id) %></li>
+    <li><%= link_to "Habits", habits_path %></li>
+    <li><%= link_to "Character", character_traits_path %></li>
+    <li><%= link_to "Beliefs", beliefs_path %></li>
+  <% else %>
+    <li><%= link_to "Life Creator", root_path %></li>
+    <li><%= link_to "Why", why_path %></li>
+    <li><%= link_to "Features", features_path %></li>
+    <li><%= link_to "Reviews", reviews_path %></li>
+    <li><%= link_to "Buy Now", buy_now_path %></li>
+    <li><%= link_to "Help", help_path %></li>
+    <li><%= link_to "About Us", about_us_path %></li>
+  <% end %>  
 </ul>
 
