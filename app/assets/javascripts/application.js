@@ -14,6 +14,7 @@
 //= require jquery-tablesorter/jquery.tablesorter
 //= require jquery-tablesorter/jquery.tablesorter.widgets
 //= require jquery.backstretch
+//= require responsive-tables
 
 $(function(){
 	$("#myTable").tablesorter({

@@ -13,16 +13,22 @@
  *
  *= require bootstrap-responsive
  *= require bootstrap
+ *= require responsive-tables
  *= require_self
  *= require_tree .
 
  
  */
 
-body { padding-top: 20px; }
+body { 
+	padding: 0px;
+	padding-top: 20px; 
+	max-width: 960px;
+	margin: 0 auto;
+	}
 
-.container {
-	width: 960px;
+.container-fluid {
+	max-width: 960px;
 }
 
 h1 {
@@ -35,12 +41,18 @@ h2 {
 	color:white;
 	}
 
+p {
+	font-weight: bold;
+	color: black;
+}
+
+
 input, textarea {
 	width: 550px;
 	}
 
 textarea {
-	height: 130px
+	height: 130px;
 }
 
 label {
@@ -49,12 +61,12 @@ label {
 }
 
 .logo {
-	margin-top: -45px;
-	margin-bottom: -25px;
+	margin-top: -25px;
+	margin-bottom: -40px;
 }
 
 .row {
-	max-width: 960px;
+	max-width: 940px;
 	margin-left: 0px;
 }
 
@@ -66,16 +78,24 @@ table, thead, tbody, td {
 	max-width: 940px;
 	word-wrap: break-word;
 	margin-left: 0px;
+	padding: .5em;
 }
 
 td {
 	max-width: 350px;
-	min-width: 20px;
+	min-width: 15x;
+	color: #284a76;
+	max-height: 30px;
 }
 
-p {
+tr {
+	max-height: 30px;	
+}
+
+.tablesorter-default, .tablesorter-default th,
+.tablesorter-default thead td {
+	font-size: 14px;
 	font-weight: bold;
-	color: black;
 }
 
 button, #goal_btn {
@@ -99,24 +119,23 @@ button, #goal_btn {
 	color: white;
 }
 
-.tablesorter-default, .tablesorter-default th,
-.tablesorter-default thead td {
-	font-size: 14px;
-}
-
 /* ...for the buttons */
 button, #btn
 {
+	float: right; 
+	position: relative;
 	display: block;
 	font-size: 1.0em;
 	font-weight: bold;
+
 	/*text-transform: uppercase;
 	background: -webkit-linear-gradient(#888, #555);
 	background: linear-gradient(#888, #555);
 	text-shadow: 0 -1px 0 #000;
 	*/
-	float: right;
+	
 	margin: auto;
+	margin-top: 8px;
 	background-color: #f8f7e5;
 	padding: 10px 15px;
 	color: #75a5e5;
