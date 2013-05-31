@@ -75,21 +75,27 @@ label {
 }
 
 table, thead, tbody, td {
-	max-width: 940px;
+	max-width: 37.5em;
 	word-wrap: break-word;
 	margin-left: 0px;
 	padding: .5em;
 }
 
 td {
-	max-width: 350px;
 	min-width: 15x;
 	color: #284a76;
-	max-height: 30px;
 }
 
-tr {
-	max-height: 30px;	
+@media only screen and (max-width: 37.5em){
+	td {
+	   display: block; /*removes columns, stacks cells*/
+	}
+	thead {
+	   display: none; /*removes column headers*/
+	}
+	input, textarea {  /*if you have a form*/
+		width: 100%;
+	}
 }
 
 .tablesorter-default, .tablesorter-default th,
