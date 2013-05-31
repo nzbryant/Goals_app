@@ -46,14 +46,31 @@ $(function(){
       }
     });
 
-        $.backstretch([
-          "/assets/surf_pic.jpg",
-          "/assets/nz_pic.jpg",
-          "/assets/money_pic.jpg",
-          ], {duration: 4700, fade: 1100});
+//Backstretch plugin: Slideshow
+  $.backstretch([
+    "/assets/surf_pic.jpg",
+    "/assets/nz_pic.jpg",
+    "/assets/money_pic.jpg",
+  ], {duration: 4700, fade: 1100});
+
+//Backstretch plugin: Click on a button to show a picture
+  $("#1").click(function(e) {
+    e.preventDefault();
+    $.backstretch("/assets/surf_pic.jpg");
+  });
+
+  $("#2").click(function(e) {
+    e.preventDefault();
+    $.backstretch("/assets/nz_pic.jpg");
+  });
+
+  $("#3").click(function(e) {
+    e.preventDefault();
+    $.backstretch("/assets/money_pic.jpg");
+  });
 
 });
 
+ //Fade out notices 
 $('#flash').fadeOut(3500);
-
 
