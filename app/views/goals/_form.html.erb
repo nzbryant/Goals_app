@@ -12,8 +12,11 @@
   <%= f.text_field :text %><br />
 
   <%= f.label :strategy %>
-  <%= f.text_area :strategy, :size => "7x2" %><br />
+  <%= f.text_area :strategy, :size => "7x2" %><br />  
 
-  <%= f.submit :id => "btn", :style => "float:left"%>
+   <div class="modal-footer">
+    <%= f.submit :class => "button", :id => "btn", :style => "float:left"%>
+   <button class="button" data-dismiss ="modal" aria-hidden="true">Close</button> 
+  </div>
   
 <% end %>

@@ -11,9 +11,8 @@
  * For Tablesorter:
  *= require theme.default.css 
  *
- *= require bootstrap-responsive
  *= require bootstrap
- *= require responsive-tables
+ *= require bootstrap-responsive
  *= require_self
  *= require_tree .
 
@@ -50,7 +49,7 @@ p {
 
 
 input, textarea {
-	width: 550px;
+	width: 475px;
 	}
 
 textarea {
@@ -84,9 +83,24 @@ table, thead, tbody, td {
 }
 
 td {
-	min-width: 15x;
+	max-width: 100%;
+	min-width: 15px;
 	color: #284a76;
 }
+
+ #myModal, #myModalLabel, .modal .modal-header {
+	max-width: 37.5em;
+	word-wrap: break-word;
+
+	label {
+		color: #333;
+	}
+ }
+
+ #myModalLabel > h4 {
+ 	padding: 5px;
+ }
+
 
 @media only screen and (max-width: 37.5em){
 	td {
@@ -95,8 +109,8 @@ td {
 	thead {
 	   display: none; /*removes column headers*/
 	}
-	input, textarea {  /*if you have a form*/
-		width: 100%;
+	input, textarea, #myModal, #myModalLabel, .modal .modal-header {  /*if you have a form*/
+		max-width: 97%;
 	}
 }
 

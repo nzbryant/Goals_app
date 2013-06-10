@@ -45,6 +45,7 @@ class GoalsController < ApplicationController
   def index
     @user = User.find(params[:user_id])
     @goals = Goal.all
+    @goal = Goal.new
   end
 end
 

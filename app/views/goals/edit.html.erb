@@ -1,2 +1,3 @@
 <h1>Goal: <%= @goal.text %></h1>
-<%= render :partial => "form" %>
+<%= render :partial => "modal", :locals => {:user => @user, :goal => @goal} %>
+  

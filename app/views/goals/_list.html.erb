@@ -1,0 +1,32 @@
+<table id="myTable" class "tablesorter">
+  <thead>
+    <tr>
+      <th class="span1">Life Area</th>
+      <th class="span1 sorter-shortDate dateFormat-mmddyyyy">Target Date (ddmmyyyy)</th>
+      <th class="span4">Goal</th>
+      <th class="span5 sorter-false">Strategy</th>
+      <th class="span1 sorter-false">Edit/Delete</th>
+      <!--th class="th-categ-edit"></th-->
+      <!--th class="th-categ-delete"></th-->
+    </tr>
+  </thead>
+
+  <tbody>
+    <!--% :order => "name DESC" %-->
+    <% unless @goals.empty? %>
+      <% for goal in @goals %>
+      <tr>
+        <td><%= goal.life_area %></td>
+        <td><%= l goal.target_date.to_date %></td>
+        <td><%= goal.text %></td>
+        <td style = "white-space: pre-wrap"><%= goal.strategy %></td>
+        <td><%= link_to "Edit", edit_user_goal_path(current_user.id, goal) %> /
+          <!--Delete the goal-->  
+            <%= link_to "Delete", user_goal_path(current_user.id, goal), :method => :delete, :confirm => "Are you sure" %>   
+        </td>
+
+      </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>

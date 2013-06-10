@@ -1,0 +1,19 @@
+<!-- Bootstrap modal form to create a goal for a user. Need to pass in user id-->
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <div id="myModalLabel"><h4>New Goal: What do you want to do, be, have or know? How do you want to relate?</h4>
+    </div>
+  </div>
+
+  <div class="modal-body">
+    <%= render :partial => "form", :locals => {:user => @user, :goal => @goal} %>
+  </div>  
+
+</div>
+
+
+
+
+  
+
