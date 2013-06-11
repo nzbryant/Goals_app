@@ -7,6 +7,15 @@
   
   <%= render :partial => "modal", :locals => {:user => @user, :goal => @goal} %>
 
+  <!--If invalid input into a modal is saved, the controller redirects it back to this file, adding the parameter modal true. The below shows the modal again if so. Otherwise a button or link click is required-->
+	<% if params[:modal] == "true" %>
+		<script> 
+			$(document).ready(function(){ 
+				$('#myModal').modal('show'); 
+			});
+		</script>
+  <% end %>
+
 </div>
 
 <div class="row-fluid">

@@ -1,5 +1,5 @@
 <!--Top right - login-->
-<div id = "top-right" style="float:right; color:gray; background-color:#f8f7e5; border-radius: 5px; padding: 2px;">
+<div id = "top-right" style="float:right; color:gray; background-color:#f8f7e5; border-radius: 4px; padding: 1px 4px 1px 4px;">
   <% if current_user %>
     <em>Logged in as <%= current_user.email %> </em>&nbsp-&nbsp
     <%= link_to "Log Out", log_out_path %>

@@ -69,8 +69,9 @@ $(function(){
     $.backstretch("/assets/money_pic.jpg");
   });
 
+  //Fade out notices 
+  $('#flash').fadeOut(4000);
 });
 
- //Fade out notices 
-$('#flash').fadeOut(4000);
+
 

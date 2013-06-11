@@ -10,9 +10,8 @@ class GoalsController < ApplicationController
     if @goal.save 
       redirect_to user_goals_path, :notice => "Your new goal is saved"
     else
-      # This line overrides the default rendering behavior, which
-      # would have been to render the "create" view.
-      render :action => "new"
+      # This regenerates the modal without needing a button or link click.
+      redirect_to user_goals_path(:modal => "true"), :flash => { :alert => "Invalid input" }
     end
     
   end
@@ -29,7 +28,7 @@ class GoalsController < ApplicationController
   def update
     if params[:commit].eql?("Cancel")
       #redirect_to user_goals_path, :notice => "Edits not saved"
-      redirect_to user_goals_path, :flash => { :alert => "Edits not saved" }
+      redirect_to user_goals_path, :flash => { :alert => "No edits saved" }
       return nil
     else
       @goal = Goal.find(params[:id])

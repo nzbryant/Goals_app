@@ -2,16 +2,16 @@
 
 <%= form_for [@user, @goal] do |f| %>
 
-  <%= f.label :life_area, :class => 'class_life_area' %>
+  <%= f.label :life_area, "Life Area (required)", :class => 'class_life_area' %>
   <%= f.text_field :life_area %><br />
 
-  <%= f.label :target_date, "Target date (dd-mm-yyyy)"%>
+  <%= f.label :target_date, "Target date (dd-mm-yyyy) (required)"%>
   <%= f.text_field :target_date %><br />
 
-  <%= f.label :text %>
+  <%= f.label :text, "Goal (required)" %>
   <%= f.text_field :text %><br />
 
-  <%= f.label :strategy %>
+  <%= f.label :strategy, "Strategy" %>
   <%= f.text_area :strategy, :size => "7x2" %><br />  
 
   <%= f.submit :class => "button", :id => "btn", :style => "float:left"%>
