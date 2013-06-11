@@ -27,13 +27,20 @@ class GoalsController < ApplicationController
    end
 
   def update
-    @goal = Goal.find(params[:id])
-    if @goal.update_attributes(params[:goal])
-      redirect_to user_goals_path, :notice => "Your goal was edited"
+    if params[:commit].eql?("Cancel")
+      #redirect_to user_goals_path, :notice => "Edits not saved"
+      redirect_to user_goals_path, :flash => { :alert => "Edits not saved" }
+      return nil
     else
-      render :edit, :notice => "Apologies, failed to save. Please try again soon."
-    end
-  end
+      @goal = Goal.find(params[:id])
+      if @goal.update_attributes(params[:goal])
+        redirect_to user_goals_path, :notice => "Your goal was edited"
+      else
+        render :edit, :notice => "Apologies, failed to save. Please try again soon."
+      end
+    end  
+  end    
+  
 
   def destroy
     @user = User.find(params[:user_id])

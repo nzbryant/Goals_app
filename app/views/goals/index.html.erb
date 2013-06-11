@@ -10,7 +10,7 @@
 </div>
 
 <div class="row-fluid">
-  <%= render :partial => "list" %>
+  <%= render :partial => "list", :locals => {:user => @user, :goal => @goal, :goals => @goals}  %>
 
 <!--Buttons for pics, using Backstretch plugin. Click triggers JS-->
   <p style="text-align: right; color:white; font-weight: bold; margin-bottom:-3px;">Click a number to show an image (stops slideshow)</p>

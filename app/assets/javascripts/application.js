@@ -72,5 +72,5 @@ $(function(){
 });
 
  //Fade out notices 
-$('#flash').fadeOut(3500);
+$('#flash').fadeOut(4000);
 
