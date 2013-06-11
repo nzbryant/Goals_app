@@ -47,18 +47,25 @@ p {
 	color: black;
 }
 
+.h5header {
+	background-color: white;
+	border-radius: 3px;
+	padding: 6px;
+	width: 475px;
+}
 
 input, textarea {
 	width: 475px;
 	}
 
 textarea {
-	height: 130px;
+	height: 115px;
 }
 
 label {
 	font-weight: bold;
 	color: white;
+	margin-bottom: 3px;
 }
 
 .logo {
@@ -98,19 +105,19 @@ td {
  }
 
  #myModalLabel > h4 {
- 	padding: 5px;
+ 	padding: 3px;
  }
 
 
-@media only screen and (max-width: 37.5em){
+@media only screen and (max-width: 768px){
 	td {
 	   display: block; /*removes columns, stacks cells*/
 	}
 	thead {
 	   display: none; /*removes column headers*/
 	}
-	input, textarea, #myModal, #myModalLabel, .modal .modal-header {  /*if you have a form*/
-		max-width: 97%;
+	input, textarea, #myModalLabel, .modal, .modal-header, .h5header {  /*if you have a form*/
+		max-width: 94%;
 	}
 }
 
