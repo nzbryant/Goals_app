@@ -15,6 +15,7 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
+
 module Goals
   class Application < Rails::Application
     Mongoid.logger.level = Logger::DEBUG
@@ -46,7 +47,7 @@ module Goals
     config.encoding = "utf-8"
 
     # Configure sensitive parameters which will be filtered from the log file.
-    config.filter_parameters += [:password]
+    config.filter_parameters += [:password, :password_confirmation]
 
     # Enable escaping HTML in JSON.
     config.active_support.escape_html_entities_in_json = true
@@ -70,6 +71,14 @@ module Goals
 
     config.generators do |g|
         g.orm :active_record
+
     end
+    #Required by Devise when deploying on Heroku "forcing your application to not access the DB
+     #or load models when precompiling your assets."
+    config.assets.initialize_on_precompile = false
+        
   end
 end
+
+
+

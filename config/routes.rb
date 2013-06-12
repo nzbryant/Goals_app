@@ -1,5 +1,7 @@
 Goals::Application.routes.draw do
 
+  devise_for :users
+  
   get "why" => "site#why", :as => "why"
   get "features" => "site#features", :as => "features"
   get "reviews" => "site#reviews", :as => "reviews"

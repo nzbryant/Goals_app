@@ -12,6 +12,7 @@ gem 'js-routes'
 gem 'bootstrap-sass'
 gem 'jquery-tablesorter'
 gem 'bson_ext'
+gem 'devise'
 
 group :development, :test do
   gem "rspec-rails"
@@ -21,7 +22,7 @@ group :development, :test do
   gem "selenium-webdriver"
   gem "pry"
   gem "database_cleaner"
-  gem "factory_girl_rails"
+ # gem "factory_girl_rails"
 end
 
 group :test do
