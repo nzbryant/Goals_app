@@ -140,7 +140,7 @@ td {
 	opacity: 0.4;
 }
 
-@media only screen and (max-width: 768px){
+@media (max-width: 768px) {
 	td {
 	   display: block; /*removes columns, stacks cells*/
 	}
