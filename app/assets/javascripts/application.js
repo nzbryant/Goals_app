@@ -15,6 +15,7 @@
 //= require jquery-tablesorter/jquery.tablesorter.widgets
 //= require jquery.backstretch
 //= require responsive-tables
+//= require bootstrap-datepicker
 
 $(function(){
 	$("#myTable").tablesorter({
@@ -58,9 +59,15 @@ $(function(){
     "/assets/night-of-love.jpg",
     "/assets/5-handling-success.jpg",
     "/assets/applestevejobs.jpeg",
-   ], {duration: 3100, fade: 1100});
+   ], {duration: 3500, fade: 1100});
 
 //Backstretch plugin: Click on a button to show a picture
+  $("#None").click(function(e) {
+    e.preventDefault();
+    // $.backstretch.destroy();
+    $('body').css('background', '#06648A');
+    $('.backstretch').remove();
+  });
   $("#1").click(function(e) {
     e.preventDefault();
     $.backstretch("/assets/surf_pic.jpg");
@@ -104,6 +111,9 @@ $(function(){
 
   //Fade out notices 
   $('#flash').fadeOut(4000);
+
+  $('#dp3').datepicker();
+
 });
 
 

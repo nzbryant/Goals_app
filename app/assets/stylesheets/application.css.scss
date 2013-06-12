@@ -13,9 +13,9 @@
  *
  *= require bootstrap
  *= require bootstrap-responsive
+ *= require datepicker
  *= require_self
  *= require_tree .
-
  
  */
 
@@ -171,6 +171,10 @@ button, #goal_btn {
 	color: white;
 	padding: 15px 0; 
 	margin-top: 10px;
+}
+
+.glyphw{
+    background-image: url(/assets/glyphicons-halflings.png);
 }
 
 /* ...for the buttons */
