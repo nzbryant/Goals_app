@@ -13,9 +13,9 @@
  *
  *= require bootstrap
  *= require bootstrap-responsive
+ *= require datepicker
  *= require_self
  *= require_tree .
-
  
  */
 
@@ -45,6 +45,34 @@ h2 {
 p {
 	font-weight: bold;
 	color: black;
+}
+
+#top-right {
+	float: right; 
+	color: gray; 
+	background-color: #f8f7e5; 
+	border-radius: 4px; 
+	padding: 1px 4px 1px 4px;
+	margin-bottom: 4px;
+}
+
+
+#bottom-right {
+	float: right; 
+	color: gray; 
+	background-color: #f8f7e5; 
+	border-radius: 4px; 
+	padding: 1px 4px 1px 4px;
+	margin-bottom: 0px;
+	clear:both; 
+	margin-top:7px
+}
+
+#choose_picture {
+	text-align: right; 
+	color: white; 
+	font-weight: bold; 
+	margin-bottom: -3px;
 }
 
 .h5header {
@@ -153,8 +181,18 @@ button, #goal_btn {
 
 .credit {
 	color: white;
+	padding: 15px 0; 
+	margin-top: 10px;
+	clear:both;
 }
 
+.glyphw{
+    background-image: url(/assets/glyphicons-halflings.png);
+}
+
+.newClass {
+	visibility: hidden
+	}
 /* ...for the buttons */
 button, #btn
 {

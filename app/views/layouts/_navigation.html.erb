@@ -1,16 +1,20 @@
 <!--Top right - login-->
-<div id = "top-right" style="float:right; color:gray; background-color:#f8f7e5; border-radius: 4px; padding: 1px 4px 1px 4px;">
+<div id = "top-right">
   <% if current_user %>
     <em>Logged in as <%= current_user.email %> </em>&nbsp-&nbsp
-    <%= link_to "Log Out", log_out_path %>
+    <%= link_to "Log out", log_out_path %>
   <% else %>
-    <%= link_to "Sign Up", sign_up_path %> or 
-    <%= link_to "Log In", log_in_path %>
+    <%= link_to "Sign up", sign_up_path %> or 
+    <%= link_to "Log in", log_in_path %>
   <% end %>
 </div>    
 
+<div id = "top-right" style="clear:both">
+  <a href="#choose_picture", style="position:relative; z-index:9999">Choose picture and stop slideshow</a>
+</div>  
+
 <!--logo-->
-<%= link_to_unless_current image_tag('LifeCreator_image.png', :class => "logo", :height => "auto", :width => "300"), root_path %>
+<%= link_to_unless_current image_tag('LifeCreator_image.png', :id=> "logo", :class => "logo", :height => "auto", :width => "300"), root_path %>
 
 <!--nav tabs-->
 <ul class="nav nav-tabs">
@@ -18,7 +22,6 @@
     <li><%= link_to "Values", values_path %></li>
     <li><%= link_to "Goals", user_goals_path(current_user.id) %></li>
     <li><%= link_to "Habits", habits_path %></li>
-    <li><%= link_to "Character", character_traits_path %></li>
     <li><%= link_to "Beliefs", beliefs_path %></li>
   <% else %>
     <li><%= link_to "Life Creator", root_path %></li>
