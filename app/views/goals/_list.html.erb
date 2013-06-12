@@ -20,9 +20,9 @@
         <td><%= l goal.target_date.to_date %></td>
         <td><%= goal.text %></td>
         <td style = "white-space: pre-wrap"><%= goal.strategy %></td>
-        <td><%= link_to "Edit", edit_user_goal_path(current_user.id, goal) %> /
+        <td><%= link_to "Edit", edit_user_goal_path(current_user.id, goal), :style=>"font-style:italic; font-weight:normal" %> /
           <!--Delete the goal-->  
-            <%= link_to "Delete", user_goal_path(current_user.id, goal), :method => :delete, :confirm => "Are you sure?" %>   
+            <%= link_to "Delete", user_goal_path(current_user.id, goal), :style=>"font-style:italic; font-weight:normal", :method => :delete, :confirm => "Are you sure?" %>   
         </td>
 
       </tr>

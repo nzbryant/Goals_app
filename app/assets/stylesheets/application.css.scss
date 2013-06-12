@@ -19,10 +19,6 @@
  
  */
 
-.newClass {
-	visibility: hidden
-	}
-
 body { 
 	padding: 0px;
 	padding-top: 20px; 
@@ -194,6 +190,9 @@ button, #goal_btn {
     background-image: url(/assets/glyphicons-halflings.png);
 }
 
+.newClass {
+	visibility: hidden
+	}
 /* ...for the buttons */
 button, #btn
 {
