@@ -16,7 +16,7 @@
   </head>
  
   <body>
-    <header>
+    <header id="mainHeader">
       <div class="container-fluid">
         <%= render 'layouts/navigation' %>
       </div>
@@ -53,9 +53,16 @@
             <button id="1" style="width:1em;">1</button>
             <button id="None" style="width:3.75em; text-align:left;">None</button>
           </div>
+          <div id = "bottom-right">
+             <a href="#mainHeader" id="clickMe">Hide / show table</a>
+          </div>
+
+          <div id = "bottom-right">
+            <a href="#logo">Return to top</a>
+          </div>
 
           <div class="row-fluid">
-              <p class="muted credit text-right">
+              <p class="muted credit text-right" >
                 <%= link_to_unless_current "Terms of Service", terms_path %><br>
                 <%= link_to_unless_current "Privacy Policy", privacy_path %><br>
                 <%= link_to_unless_current "About Us", about_us_path %><br>

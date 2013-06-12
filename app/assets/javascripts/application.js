@@ -114,6 +114,11 @@ $(function(){
 
   $('#dp3').datepicker();
 
+  //Toggle table on and off
+  $('#clickMe').click(function() {
+    $('#main').toggleClass("newClass");   
+  });
+
 });
 
 
