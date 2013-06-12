@@ -6,7 +6,7 @@ class User
   
   attr_accessible :email, :password, :password_confirmation
 
-  attr_accessor :password, :password_confirmation, :goals
+  attr_accessor :password, :goals
 
   field :email, type: String
   field :fish, type: String
@@ -24,9 +24,9 @@ class User
   embeds_many :values
   embeds_many :character_traits
 
-  validates :email, length: { minimum: 6 }, uniqueness: true
+  validates :email, length: { minimum: 6 }, presence: true, uniqueness: true
   validates_presence_of :password, :on => :create
-  validates :password, length: { minimum: 5 } 
+  validates :password, length: { minimum: 5 } , presence: true
   validates_confirmation_of :password
   
   before_save :encrypt_password
