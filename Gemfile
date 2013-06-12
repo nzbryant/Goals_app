@@ -31,10 +31,11 @@ group :test do
   gem "guard-rspec"
 end
 
+gem 'sass-rails'
+  
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails'
   gem 'compass-rails'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
