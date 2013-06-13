@@ -19,7 +19,7 @@ class User
   #Do you really need to have an attr_accessor?, if not simply remove it.
   #You need to add attr_accessor for :password as that is not saved to the database for security reasons 
   #With password in attr_accessor, evise does not seem to create an encrypted password for the model
-  attr_accessor   :goals
+  attr_accessor   :goal, :goals
 
   field :email, type: String
   field :fish, type: String

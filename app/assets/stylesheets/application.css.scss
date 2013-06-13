@@ -19,6 +19,14 @@
  
  */
 
+.datepicker {
+	z-index: 9999;
+}
+
+.dropdown-menu {
+	z-index: 9999;
+}
+
 body { 
 	padding: 0px;
 	padding-top: 20px; 
@@ -124,7 +132,7 @@ td {
 }
 
 #myModal {
-	z-index:9999;
+	z-index:9998;
 }
 
 #myModal, #myModalLabel, .modal .modal-header {

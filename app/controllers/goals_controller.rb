@@ -6,9 +6,9 @@ class GoalsController < ApplicationController
 
   def create
     @user = User.find(params[:user_id])
-    @goal = Goal.new(params[:goal])
+    @goal = @user.goals.new(params[:goal]) 
     if @goal.save 
-      redirect_to user_goals_path, :notice => "Your new goal is saved"
+      redirect_to user_goals_path(current_user), :notice => "Your new goal is saved"
     else
       # This regenerates the modal without needing a button or link click.
       redirect_to user_goals_path(:modal => "true"), :flash => { :alert => "Invalid input" }
@@ -22,18 +22,22 @@ class GoalsController < ApplicationController
 
    def edit
      @user = User.find(params[:user_id])
-     @goal = Goal.find(params[:id])
+     #@goal = Goal.find(params[:id])
+     @goal = @user.goals.find(params[:id])
+     
    end
 
   def update
     if params[:commit].eql?("Cancel")
       #redirect_to user_goals_path, :notice => "Edits not saved"
-      redirect_to user_goals_path, :flash => { :alert => "No edits saved" }
+      redirect_to user_goals_path(current_user), :flash => { :alert => "No edits saved" }
       return nil
     else
-      @goal = Goal.find(params[:id])
+      @user = User.find(params[:user_id])
+       @goal = @user.goals.find(params[:id])
+     # @goal = Goal.find(params[:id])
       if @goal.update_attributes(params[:goal])
-        redirect_to user_goals_path, :notice => "Your goal was edited"
+        redirect_to user_goals_path(current_user), :notice => "Your goal was edited"
       else
         render :edit, :notice => "Apologies, failed to save. Please try again soon."
       end
@@ -42,7 +46,7 @@ class GoalsController < ApplicationController
 
   def destroy
     @user = User.find(params[:user_id])
-    @goal = Goal.find(params[:id])
+    @goal = @user.goals.find(params[:id])
     @goal.destroy
     redirect_to user_goals_path, :notice => "Goal was deleted."
   end

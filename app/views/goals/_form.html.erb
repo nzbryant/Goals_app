@@ -6,7 +6,12 @@
   <%= f.text_field :life_area %><br />
 
   <%= f.label :target_date, "Target date (dd-mm-yyyy)"%>
-  <%= f.text_field :target_date %><br />
+
+  <div class="input-append date" id="dp3" data-date="13-06-2013" data-date-format="dd-mm-yyyy">
+    <!-- <input class="span8" size="16" type="text" value="13-06-2013" readonly> -->
+    <%= f.text_field :target_date, html: { class: 'span8', size: '16', value: '13-06-2013', readonly: true } %>
+    <span class="add-on"><i class="icon-th glyphw"></i></span>
+  </div>
 
   <%= f.label :text %>
   <%= f.text_field :text %><br />

@@ -19,7 +19,7 @@ Goals::Application.routes.draw do
 
   resources :values, :beliefs, :internal_comms, :external_comms, :habits, :character_traits
   
-  resources :users, :except => [ :edit, :show ] do
+  resources :users, :except => [ :show ] do
 	  resources :goals
 	end
    
