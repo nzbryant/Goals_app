@@ -16,6 +16,19 @@ Goals::Application.configure do
   # Don't care if the mailer can't send
   config.action_mailer.raise_delivery_errors = false
 
+  config.action_mailer.delivery_method = :smtp
+  
+  config.action_mailer.smtp_settings = {
+    :enable_starttls_auto => true,
+    :address => 'smtp.yahoo.com',
+    :port => 587,
+    :tls => true,
+    :domain => 'mail.yahoo.com', #you can also use google.com
+    :authentication => :plain,
+    :user_name => 'nzbryantar@yahoo.com',
+    :password => 'davebean1'
+  }
+  
   # In production, :host should be set to the actual host of your application.
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 

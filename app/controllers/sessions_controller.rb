@@ -20,5 +20,4 @@ class SessionsController < ApplicationController
     redirect_to root_url, :notice => "You are now logged out"
   end
 
-
 end

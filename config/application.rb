@@ -73,9 +73,9 @@ module Goals
         g.orm :active_record
 
     end
-    #Required by Devise when deploying on Heroku "forcing your application to not access the DB
+    #Required by Devise to be false when deploying on Heroku "forcing your application to not access the DB
      #or load models when precompiling your assets."
-    config.assets.initialize_on_precompile = false
+    config.assets.initialize_on_precompile = true
         
   end
 end

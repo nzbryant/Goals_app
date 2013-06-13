@@ -8,18 +8,22 @@ class User
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :rememberable, :confirmable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me
- 
+    
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :encrypted_password
   
-  attr_accessible :email, :password, :password_confirmation
-  attr_accessor :password, :goals
+  attr_accessor :password, :encrypted_password, :goals
 
   field :email, type: String
   field :fish, type: String
   field :salt, type: String
+  field :encrypted_password, type: String
+  field :confirmation_token,   :type => String
+  field :confirmed_at,         :type => Time
+  field :confirmation_sent_at, :type => Time
+  field :unconfirmed_email,    :type => String
 
   #field :password_digest, :type => String  
   #has_secure_password
@@ -39,6 +43,7 @@ class User
   validates_confirmation_of :password
   
   before_save :encrypt_password
+
 
 	def self.find_by_email(email)
     where(:email => email).first
