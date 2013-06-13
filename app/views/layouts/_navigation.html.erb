@@ -6,13 +6,18 @@
     <em>Logged in as <%= current_user.email %> </em>&nbsp-&nbsp
     <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
   <% else %>
-    <%= link_to('Login', new_user_session_path)  %>  
-  <% end %>
+    <% if controller_name != 'sessions' %> 
+      <%= link_to('Login', new_user_session_path) %> &nbsp
+      <% end %>
+    <% if controller_name != 'registrations' %>
+      &nbsp<%= link_to "Sign up", new_user_registration_path %><br />
+      <% end %>
+    <% end %>
 </div>
 
 <!---->
 <div id = "top-right" style="clear:both">
-  <a href="#choose_picture", style="position:relative; z-index:9999">Choose background and stop slideshow</a>
+  <a href="#choose_picture", style="position:relative; z-index:9998">Choose background and stop slideshow</a>
 </div>  
 
 <!--logo-->

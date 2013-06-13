@@ -8,5 +8,8 @@ class ApplicationController < ActionController::Base
   # 	@current_user ||= User.find(session[:user_id]) if session[:user_id]
   # end
 
- 
+ 	def after_sign_in_path_for(resource)
+ 		user_goals_path(current_user)
+	end
+
 end

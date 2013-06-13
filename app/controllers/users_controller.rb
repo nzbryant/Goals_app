@@ -18,13 +18,13 @@ def index
 	@users = User.all.to_a
 end
 
-def show
-	begin
-		@user = User.find(params[:id])
-	rescue
-		head :not_found
-	end
-end
+# def show
+# 	begin
+# 		@user = User.find(params[:id])
+# 	rescue
+# 		head :not_found
+# 	end
+# end
 
 
 def update
