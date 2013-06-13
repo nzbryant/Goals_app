@@ -15,6 +15,7 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
+require 'devise/orm/mongoid'
 
 module Goals
   class Application < Rails::Application

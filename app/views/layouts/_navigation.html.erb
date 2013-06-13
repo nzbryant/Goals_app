@@ -2,17 +2,17 @@
 
 <!--Devise-->
 <div id = "top-right">
-  <!--% if user_signed_in? %-->
-    <!--<em>Logged in as <%= current_user.email %> </em>&nbsp-&nbsp -->
+  <% if user_signed_in? %>
+    <em>Logged in as <%= current_user.email %> </em>&nbsp-&nbsp
     <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
-  <!--% else %-->
+  <% else %>
     <%= link_to('Login', new_user_session_path)  %>  
-  <!--% end %-->
+  <% end %>
 </div>
 
 <!---->
 <div id = "top-right" style="clear:both">
-  <a href="#choose_picture", style="position:relative; z-index:9999">Choose picture and stop slideshow</a>
+  <a href="#choose_picture", style="position:relative; z-index:9999">Choose background and stop slideshow</a>
 </div>  
 
 <!--logo-->

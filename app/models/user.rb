@@ -12,7 +12,7 @@ class User
 
   # Setup accessible (or protected) attributes for your model
     
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :encrypted_password
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :encrypted_password; :remember_created_at
   
   attr_accessor :password, :encrypted_password, :goals
 
@@ -24,6 +24,7 @@ class User
   field :confirmed_at,         :type => Time
   field :confirmation_sent_at, :type => Time
   field :unconfirmed_email,    :type => String
+  field :remember_created_at, :type=> Time
 
   #field :password_digest, :type => String  
   #has_secure_password

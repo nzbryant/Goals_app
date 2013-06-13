@@ -9,7 +9,7 @@
     <%= csrf_meta_tags %>
     <title>Goals</title>
 
-    <%= include_gon %>
+    <!--%= include_gon %-->
     <%= stylesheet_link_tag "application", :media => "all" %>
     <!--JS is included at the top here, as there is an issue with re-rendering the modal box for a new goal after invalid user input. A parameter "modal=true" is passed from the controller to the index view if there is invalid input, so that the modal can be re-generated without a link or button click. An uncaught reference error results unless jQuery is called before the code in the index view is read-->
     <%= javascript_include_tag "application" %>
