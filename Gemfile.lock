@@ -37,8 +37,6 @@ GEM
       erubis (>= 2.6.6)
     binding_of_caller (0.7.1)
       debug_inspector (>= 0.0.1)
-    bootstrap-sass (2.3.1.0)
-      sass (~> 3.2)
     bson (1.8.6)
     bson_ext (1.8.5)
       bson (~> 1.8.5)
@@ -254,7 +252,6 @@ DEPENDENCIES
   bcrypt-ruby
   better_errors
   binding_of_caller
-  bootstrap-sass
   bson_ext
   capybara
   compass-rails

@@ -76,7 +76,7 @@ module Goals
     end
     #Required by Devise to be false when deploying on Heroku "forcing your application to not access the DB
      #or load models when precompiling your assets."
-    config.assets.initialize_on_precompile = false
+    config.assets.initialize_on_precompile = true
 
         
   end
