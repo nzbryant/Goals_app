@@ -108,7 +108,7 @@
   }
 }
 
-@media  {
+@media screen  {
   .row {
     margin-left: -30px;
     *zoom: 1;
