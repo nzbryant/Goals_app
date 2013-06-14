@@ -165,6 +165,18 @@ button, #goal_btn {
 	border-radius: 3px;
 }
 
+@media screen and (max-width: 768px) {
+	td {
+	   display: block; /*removes columns, stacks cells*/
+	}
+	thead {
+	   display: none; /*removes column headers*/
+	}
+	input, textarea, #myModalLabel, .modal, .modal-header, .h5header {  /*if you have a form*/
+		max-width: 94%;
+	}
+}
+
 .buttonleft {
 	float: left;
 }
